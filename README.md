@@ -1,7 +1,7 @@
 <h2>The folder contains the following files:</h2>
 
 1. README.md
-2. eda.ipynb
+2. datasets
 3. models.ipynb
 4. requirements.txt
 
@@ -34,6 +34,9 @@ A histogram was used to show the distribution of prices for Show and No Show. Fo
 | checkout_day| Remove rows where the 'checkout_day' variable has negative values|
 | arrival_month| Convert all the months in 'arrival_month' to lowercase and capitalise the first letter|
 |branch, country, first_time, room| Map categorical variables 'branch', 'country', 'first_time', and 'room' to numerical labels for machine learning modelling|
+<h2> Statistical Descriptions </h2>
+
+Our target variable no_show is a categorical variable. Majority of the features in our dataset are categorical variables. To find relation between two categorical variables we conducted the Cramer’s V test. The input of the Cramer’s V test is the statistic component of the chi square test.
 
 <h2>Choice of Models for Machine Learning Tasks:</h2>
 
@@ -58,7 +61,7 @@ RNNs are a type of neural network designed to handle sequential data, where the 
 The hybrid CNN-LSTM model can analyze both spatial features (e.g., room types, branch locations) and temporal patterns (e.g., booking history, lead times) to make predictions about no shows. The CNN component can extract spatial features from categorical variables, while the LSTM component can capture temporal dependencies in the sequential booking data. This combination allows the model to leverage the strengths of both architectures for improved prediction accuracy.
 <h2>Evaluation of Models:</h2>
 
-All the 3 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the outcome of the model (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. The accuracy refers to the probability of the model in predicting the outcome correctly. In summary, the Logistic Regression, Decision Tree, and Random Forest yield an accuracy of 0.71, 0.70, and 0.72, respectively.
+All the 3 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the outcome of the model (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. The accuracy refers to the probability of the model in predicting the outcome correctly. In summary, the Logistic Regression, Decision Tree, Random Forest, Recurrent Neural Network and CNN and LSTM Hybrid yield an accuracy of 0.71, 0.70, and 0.72, respectively.
 
 <h2> Acknowledgments </h2>
 
