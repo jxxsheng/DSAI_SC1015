@@ -49,6 +49,18 @@ A Decision Tree is suitable as it provides a clear and interpretable structure t
 
 Random Forest can capture non-linear relationships between predictor variables and the target variable 'no_show'. It is an ensemble learning method that combines multiple decision trees, each trained on a random subset of the data and variables. This ensemble approach helps reduce overfitting and improves generalisation performance compared to a single decision tree.
 
+<h3>Model 4: Recurrent Neural Network</h3>
+
+RNNs are a type of neural network designed to handle sequential data, where the order of data points is crucial. In the context of hotel reservations, sequential data could include the booking history of a guest or the sequence of events leading up to a reservation. RNNs are well-suited for capturing temporal dependencies in such data, as they maintain an internal state or memory that allows them to process sequences of inputs. This memory mechanism enables RNNs to learn from past events and make predictions based on the sequence of data points.
+
+<h3>Model 5: Convolutional Neural Network (CNN) and LSTM Hybrid</h3>
+
+The hybrid CNN-LSTM model can analyze both spatial features (e.g., room types, branch locations) and temporal patterns (e.g., booking history, lead times) to make predictions about no shows. The CNN component can extract spatial features from categorical variables, while the LSTM component can capture temporal dependencies in the sequential booking data. This combination allows the model to leverage the strengths of both architectures for improved prediction accuracy.
 <h2>Evaluation of Models:</h2>
 
 All the 3 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the outcome of the model (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. The accuracy refers to the probability of the model in predicting the outcome correctly. In summary, the Logistic Regression, Decision Tree, and Random Forest yield an accuracy of 0.71, 0.70, and 0.72, respectively.
+
+<h2> Acknowledgments </h2>
+
+The dataset used in this project was obtained from [source].
+Inspiration and guidance from various online tutorials, articles, and open-source projects were instrumental in developing the models and analyzing the results.
