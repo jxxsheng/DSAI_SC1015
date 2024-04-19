@@ -1,3 +1,5 @@
+<h1>Hotel Reservation No-Show Prediction</h1>
+
 <h2>The folder contains the following files:</h2>
 
 1. README.md
@@ -16,10 +18,10 @@
 1. Data Cleaning: Remove rows with missing/abnormal values, standardise data units/formats, and handle data type conversion.
 2. Data Exploration: Analyse the dataset structure, generate summary statistics, and examine categorical variables using countplots.
 3. Visualisation: Create visuals to identify variables with potential relationships with the target variable 'no_show'.
-4. Hypothesis Testing: Use Chi-Square test to determine significant relationships between variables and 'no_show'.
+4. Hypothesis Testing: Use Cramer'sV and Chi-Square test to determine significant relationships between variables and 'no_show'.
 5. Model Selection: Choose suitable machine learning models (e.g., Logistic Regression, Decision Tree, Random Forest) based on the target variable and predictors.
 6. Model Training: Train the selected models using 80% of the dataset.
-7. Model Evaluation: Evaluate model performance using accuracy, precision, recall, F1 score, and confusion matrix metrics.
+7. Model Evaluation: Evaluate model performance using accuracy, precision, recall, F1 score, ROC-AUC and confusion matrix metrics.
 
 <h2>Overview of Key Findings from EDA:</h2>
 
