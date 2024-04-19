@@ -59,11 +59,17 @@ The hybrid CNN-LSTM model can analyze both spatial features (e.g., room types, b
 
 <h2>Evaluation of Models:</h2>
 
-All 5 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the outcome of the model (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. The accuracy refers to the probability of the model in predicting the outcome correctly. In summary, the Logistic Regression, Decision Tree, Random Forest, Recurrent Neural Network and CNN and LSTM Hybrid yield an accuracy of 71%, 70%, 76%, 72% and 70% respectively.
+All 5 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the outcome of the model (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. The accuracy refers to the probability of the model in predicting the outcome correctly. In summary, the Logistic Regression, Decision Tree, Random Forest, Recurrent Neural Network and CNN and LSTM Hybrid yield an accuracy of 72%, 70%, 76%, 72% and 70% respectively.
+
+<h2>Conclusion</h2>
+
+The Random Forest model produces the highest accuracy and is less prone to overfitting. As such, it can take in more significant variables to generate a prediction with higher accuracy. Therefore, we can use this model to predict whether a customer will show up for his hotel reservation. In order to reduce expenses incurred due to No-Shows, the hotel chain could consider implementing a deposit fee that is non-refundable on customers which the Random Forest predicts not showing up.
+
+<h2>What we have learned</h2>
 
 <h2>Contributors</h2>
 
-<h2> Acknowledgments </h2>
+<h2>Acknowledgments</h2>
 
 The dataset used in this project was obtained from [source].
 Inspiration and guidance from various online tutorials, articles, and open-source projects were instrumental in developing the models and analyzing the results.
