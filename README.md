@@ -42,6 +42,8 @@ A Logistic Regression model is suitable as it takes in two or more predictor var
 Accuracy: 72% 
 <br>
 ROC-AUC: 0.735
+<br>
+F1 Score (No Show): 0.57
 
 <h4>Model 2: Multi-Variate Decision Tree</h4>
 
@@ -50,6 +52,8 @@ A Decision Tree is suitable as it provides a clear and interpretable structure t
 Accuracy: 70%
 <br>
 ROC-AUC: 0.713
+<br>
+F1 Score (No Show): 0.53
 
 <h4>Model 3: Random Forest Classification</h4>
 
@@ -58,6 +62,8 @@ Random Forest can capture non-linear relationships between predictor variables a
 Accuracy: 77%
 <br>
 ROC-AUC: 0.827
+<br>
+F1 Score (No Show): 0.67
 
 <h4>Model 4: Recurrent Neural Network</h4>
 
@@ -66,6 +72,8 @@ RNNs are a type of neural network designed to handle sequential data, where the 
 Accuracy: 72%
 <br>
 ROC-AUC: 0.715
+<br>
+F1 Score (No Show): 0.53
 
 <h4>Model 5: Convolutional Neural Network (CNN) and LSTM Hybrid</h4>
 
@@ -74,6 +82,8 @@ The hybrid CNN-LSTM model can analyze both spatial features (e.g., room types, b
 Accuracy: 70%
 <br>
 ROC-AUC: 0.747
+<br>
+F1 Score (No Show): 0.57
 
 <h2>Conclusion</h2>
 
