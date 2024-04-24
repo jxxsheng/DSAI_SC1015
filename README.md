@@ -107,4 +107,9 @@ The Random Forest model produces the highest accuracy, ROC-AUC and F1 Score acro
 References to industry specifc websites our group used to evaluate the problem better.
 
 Manuel Banza, Predicting Hotel Booking Cancellations Using Machine Learning
+
+https://manuelbanza.github.io/hotel-booking-cancellations-using-machine-learning/
+
 Susana Castro, No-Show, Cancellations, Walk-ins and the Overbooking pain in hotels
+
+https://revmanager.eu/cancellations-overbooking-noshow-hotels/
