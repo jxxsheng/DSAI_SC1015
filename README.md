@@ -103,8 +103,7 @@ The Random Forest model produces the highest accuracy, ROC-AUC and F1 Score acro
 - @izackyy (Models and research)
 - @jxxsheng (EDA and research)
 
-
-References to industry specifc websites our group used to evaluate the problem better.
+<h2>References</h2>
 
 Manuel Banza, Predicting Hotel Booking Cancellations Using Machine Learning
 
