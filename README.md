@@ -11,7 +11,7 @@ How could we predict and minimise the number of no-shows in order to maintain an
 <h2>Flow of Pipeline:</h2>
 
 1. Data Cleaning: Remove rows with missing/abnormal values, standardise data units/formats, and handle data type conversion
-2. Exploratory Data Analysis: Examine categorical variable using countplot and numerical variable using histogram
+2. Exploratory Data Analysis: Examine categorical variables using countplot and numerical variable using histogram
 3. Visualisation: Create visual plots to identify variables with potential relationships with the target variable 'no_show'
 4. Hypothesis Testing: Use Cramer's V and Chi-squared test to determine significant relationships between variables and 'no_show'
 5. Model Training: Train machine learning models (Logistic Regression, Decision Tree, Random Forest, RNN, CNN)
@@ -35,35 +35,45 @@ Our target variable is 'no_show', with '1' indicating No Show and '0' indicating
 
 All 5 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the accuracy of the model  (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. Below is a summary of the model description and results.
 
-<h3>Model 1: Binary Logistic Regression</h3>
+<h4>Model 1: Binary Logistic Regression</h4>
 
 A Logistic Regression model is suitable as it takes in two or more predictor variables to predict the outcome of the categorical target variable 'no_show'. In this case, the predictor variables are all categorical.
 
-Accuracy: 72%
+Accuracy: 72% 
+<br>
+ROC-AUC: 0.735
 
-<h3>Model 2: Multi-Variate Decision Tree</h3>
+<h4>Model 2: Multi-Variate Decision Tree</h4>
 
 A Decision Tree is suitable as it provides a clear and interpretable structure that shows how decisions are made based on the predictor variables. This can help us understand the factors influencing the target variable and determine the predictors that have a greater impact on the target variable 'no_show'. 
 
 Accuracy: 70%
+<br>
+ROC-AUC: 0.713
 
-<h3>Model 3: Random Forest Classification</h3>
+<h4>Model 3: Random Forest Classification</h4>
 
 Random Forest can capture non-linear relationships between predictor variables and the target variable 'no_show' by combining multiple decision trees, each trained on a random subset of the data and variables. This ensemble approach helps reduce overfitting and improves generalisation performance compared to a single decision tree. It can also take in more significant predictor variables to produce a higher accuracy.
 
 Accuracy: 77%
+<br>
+ROC-AUC: 0.827
 
-<h3>Model 4: Recurrent Neural Network</h3>
+<h4>Model 4: Recurrent Neural Network</h4>
 
 RNNs are a type of neural network designed to handle sequential data, where the order of data points is crucial. In this context, sequential data could include the booking history of a guest or the sequence of events leading up to a reservation. RNNs are well-suited for capturing temporal dependencies in such data, as they maintain an internal state or memory that allows them to process sequences of inputs. This memory mechanism enables RNNs to learn from past events and make predictions based on the sequence of data points.
 
 Accuracy: 72%
+<br>
+ROC-AUC: 0.715
 
-<h3>Model 5: Convolutional Neural Network (CNN) and LSTM Hybrid</h3>
+<h4>Model 5: Convolutional Neural Network (CNN) and LSTM Hybrid</h4>
 
 The hybrid CNN-LSTM model can analyze both spatial features (e.g., room types, branch locations) and temporal patterns (e.g., booking history, lead times) to make predictions about no-shows. The CNN component can extract spatial features from categorical variables, while the LSTM component can capture temporal dependencies in the sequential booking data. This combination allows the model to leverage the strengths of both architectures for improved prediction accuracy.
 
 Accuracy: 70%
+<br>
+ROC-AUC: 0.747
 
 <h2>Conclusion</h2>
 
@@ -74,8 +84,8 @@ The Random Forest model produces the highest accuracy, ROC-AUC and F1 Score acro
 - Handling and cleaning imbalanced datasets
 - RNN and CNN with LSTM
 - Collaborating using GitHub
-- Concepts about Precision, Recall, F1 SCore, ROC-AUC
-- Strengthen concepts on the Data Science pipeline
+- Concepts about Accuracy, Precision, Recall, F1 SCore, ROC-AUC for model evaluation
+- Understanding and applying the Data Science pipeline
 
 <h2>Contributors</h2>
 
