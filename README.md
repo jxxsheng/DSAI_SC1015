@@ -33,7 +33,7 @@ Our target variable is 'no_show', with '1' indicating No Show and '0' indicating
 
 <h2>Machine Learning Models:</h2>
 
-All 5 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the accuracy of the model  (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. Below is a summary of the model description and results.
+All 5 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the accuracy of the model (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. The ROC-AUC score measures the ability of the model to distinguish between No Show and Show classes, and the F1 score provides a balanced assessment of the model's accuracy in correctly identifying No Show instances. Below is a summary of the model description and evaluation.
 
 <h4>Model 1: Binary Logistic Regression</h4>
 
