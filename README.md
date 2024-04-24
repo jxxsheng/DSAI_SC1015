@@ -17,7 +17,7 @@ How could we predict and minimise the number of no-shows in order to maintain an
 5. Model Training: Train machine learning models (Logistic Regression, Decision Tree, Random Forest, RNN, CNN)
 6. Model Evaluation: Evaluate model performance using accuracy, precision, recall, F1 score, ROC-AUC and confusion matrix metrics
 
-<h2>Overview of Key Findings from EDA:</h2>
+<h2>Overview of EDA:</h2>
 
 A histogram was used to show the distribution of prices for Show and No Show. There is no noticeable relationship between 'price' and 'no_show' as the distributions are quite similar. For other variables, a countplot was used to compare the proportion of No Show to Show. A higher variation of No Show to Show across the different features in the variable would thus indicate a relationship with 'no_show'. From the observation, we find that 'branch', 'country', 'first_time', 'room', and 'arrival_month' have a significant relationship with 'no_show'. Therefore, these parameters will be used to train the Machine Learning Models.
 
@@ -37,39 +37,58 @@ Our target variable 'no_show' is a categorical variable. Majority of the variabl
 
 <h2>Machine Learning Models:</h2>
 
+All 5 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the accuracy of the model  (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. Below is a summary of the model description and results.
+
 <h3>Model 1: Binary Logistic Regression</h3>
 
 A Logistic Regression model is suitable as it takes in two or more predictor variables to predict the outcome of the categorical target variable 'no_show'. In this case, the predictor variables are all categorical.
 
+Accuracy: 72%
+
 <h3>Model 2: Multi-Variate Decision Tree</h3>
 
-A Decision Tree is suitable as it provides a clear and interpretable structure that shows how decisions are made based on the predictor variables. This can help us understand the factors influencing the target variable and determine the predictors that have a greater impact on the target variable. Another advantage of a Decision tree is that it can capture non-linear relationships between predictors and the target variable.
+A Decision Tree is suitable as it provides a clear and interpretable structure that shows how decisions are made based on the predictor variables. This can help us understand the factors influencing the target variable and determine the predictors that have a greater impact on the target variable. 
+
+Accuracy: 70%
 
 <h3>Model 3: Random Forest Classification</h3>
 
-Random Forest can capture non-linear relationships between predictor variables and the target variable 'no_show'. It is an ensemble learning method that combines multiple decision trees, each trained on a random subset of the data and variables. This ensemble approach helps reduce overfitting and improves generalisation performance compared to a single decision tree.
+Random Forest can capture non-linear relationships between predictor variables and the target variable 'no_show' by combining multiple decision trees, each trained on a random subset of the data and variables. This ensemble approach helps reduce overfitting and improves generalisation performance compared to a single decision tree.
+
+Accuracy: 77%
 
 <h3>Model 4: Recurrent Neural Network</h3>
 
-RNNs are a type of neural network designed to handle sequential data, where the order of data points is crucial. In the context of hotel reservations, sequential data could include the booking history of a guest or the sequence of events leading up to a reservation. RNNs are well-suited for capturing temporal dependencies in such data, as they maintain an internal state or memory that allows them to process sequences of inputs. This memory mechanism enables RNNs to learn from past events and make predictions based on the sequence of data points.
+RNNs are a type of neural network designed to handle sequential data, where the order of data points is crucial. In this context, sequential data could include the booking history of a guest or the sequence of events leading up to a reservation. RNNs are well-suited for capturing temporal dependencies in such data, as they maintain an internal state or memory that allows them to process sequences of inputs. This memory mechanism enables RNNs to learn from past events and make predictions based on the sequence of data points.
+
+Accuracy: 72%
 
 <h3>Model 5: Convolutional Neural Network (CNN) and LSTM Hybrid</h3>
 
 The hybrid CNN-LSTM model can analyze both spatial features (e.g., room types, branch locations) and temporal patterns (e.g., booking history, lead times) to make predictions about no-shows. The CNN component can extract spatial features from categorical variables, while the LSTM component can capture temporal dependencies in the sequential booking data. This combination allows the model to leverage the strengths of both architectures for improved prediction accuracy.
 
-<h2>Evaluation of Models:</h2>
-
-All 5 Machine Learning Models are evaluated using the Confusion Matrix, which uses the Test dataset to test the outcome of the model (i.e. to determine the number of entries that were predicted correctly and wrongly using the model). The accuracy of the model is measured by taking (True Positive + True Negative) / Total number of entries. The accuracy refers to the probability of the model in predicting the outcome correctly. In summary, the Logistic Regression, Decision Tree, Random Forest, Recurrent Neural Network and CNN and LSTM Hybrid yield an accuracy of 72%, 70%, 76%, 72% and 70% respectively.
+Accuracy: 70%
 
 <h2>Conclusion</h2>
 
-The Random Forest model produces the highest accuracy and is less prone to overfitting. As such, it can take in more significant variables to generate a prediction with higher accuracy. Therefore, we can use this model to predict whether a customer will show up for his hotel reservation. In order to reduce expenses incurred due to No-Shows, the hotel chain could consider implementing a deposit fee that is non-refundable on customers which the Random Forest predicts not showing up.
+The Random Forest model produces the highest accuracy, ROC-AUC and F1 Score across all models. Since the model is less prone to overfitting, it can take in more predictor variables to generate a prediction with higher accuracy and performance. Therefore, we can use this model to predict whether a customer will show up for his hotel reservation. 
+In order to reduce expenses incurred due to No-Shows, the hotel chain could consider implementing a deposit fee that is non-refundable on customers which the Random Forest predicts not showing up.
 
 <h2>What we have learned</h2>
 
+- Handling and cleaning imbalanced datasets
+- RNN and CNN with LSTM
+- Collaborating using GitHub
+- Concepts about Precision, Recall, F1 SCore, ROC-AUC
+- Strengthen concepts on the Data Science pipeline
+
 <h2>Contributors</h2>
+
+- @chenglin2003 (Models and research)
+- @izackyy (Models and research)
+- @jxxsheng (EDA and research)
 
 <h2>Acknowledgments</h2>
 
 The dataset used in this project was obtained from [source].
-Inspiration and guidance from various online tutorials, articles, and open-source projects were instrumental in developing the models and analyzing the results.
+Inspiration and guidance from various sources such as lectures, online tutorials, articles, and open-source projects were instrumental in developing the models and analyzing the results.
