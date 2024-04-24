@@ -2,7 +2,7 @@
 
 <h2>Introduction</h2>
 
-Hotel no-shows result in missed revenue opportunities and increased costs due to resource wastage. When guests fail to show up for their reservations, the hotel loses out on potential revenue from the unoccupied rooms. Additionally, the hotel has already incurred costs associated with preparing the room, such as cleaning, maintenance, and staffing. These resources could have been utilised more effectively if the room was occupied by a paying guest.
+Hotel no-shows result in missed revenue opportunities and increased costs due to resource wastage. When guests fail to show up for their reservations, the hotel loses out on potential revenue from the unoccupied rooms. Additionally, the hotel has already incurred costs associated with room preparations, such as cleaning and maintenance. These resources could have been utilised more effectively if the room was occupied by a paying guest.
 
 <h2>Problem Definition</h2>
 
@@ -13,13 +13,13 @@ How could we predict and minimise the number of no-shows in order to maintain an
 1. Data Cleaning: Remove rows with missing/abnormal values, standardise data units/formats, and handle data type conversion
 2. Exploratory Data Analysis: Examine categorical variable using countplot and numerical variable using histogram
 3. Visualisation: Create visual plots to identify variables with potential relationships with the target variable 'no_show'
-4. Hypothesis Testing: Use Cramer's V and Chi-Square test to determine significant relationships between variables and 'no_show'
+4. Hypothesis Testing: Use Cramer's V and Chi-squared test to determine significant relationships between variables and 'no_show'
 5. Model Training: Train machine learning models (Logistic Regression, Decision Tree, Random Forest, RNN, CNN)
 6. Model Evaluation: Evaluate model performance using accuracy, precision, recall, F1 score, ROC-AUC and confusion matrix metrics
 
 <h2>Overview of EDA:</h2>
 
-A histogram was used to show the distribution of prices for Show and No Show. There is no noticeable relationship between 'price' and 'no_show' as the distributions are quite similar. For other variables, a countplot was used to compare the proportion of No Show to Show. A higher variation of No Show to Show across the different features in the variable would thus indicate a relationship with 'no_show'. From the observation, we find that 'branch', 'country', 'first_time', 'room', and 'arrival_month' have a significant relationship with 'no_show'. Therefore, these parameters will be used to train the Machine Learning Models.
+Our target variable is 'no_show', with '1' indicating No Show and '0' indicating Show. A histogram was used to show the distribution of prices (numerical) for Show and No Show. There is no noticeable relationship between 'price' and 'no_show' as the distributions are quite similar. For other variables (categorical), a countplot was used to compare the proportion of No Show to Show. A higher variation of No Show to Show across the different features in the variable would thus indicate a relationship with 'no_show'. From the observation, we find that 'branch', 'country', 'first_time', 'room', and 'arrival_month' have a significant relationship with 'no_show'. We further confirm the relationship using Cramer's V and Chi-squared test. Therefore, these variables/predictors will be used to train the Machine Learning Models.
 
 <h2>Features Processing:</h2>
 
@@ -30,10 +30,6 @@ A histogram was used to show the distribution of prices for Show and No Show. Th
 | checkout_day| Remove rows where the 'checkout_day' variable has negative values|
 | arrival_month| Convert all the months in 'arrival_month' to lowercase and capitalise the first letter|
 |branch, country, first_time, room, arrival_month| Map categorical variables 'branch', 'country', 'first_time', 'room', and 'arrival_month' to numerical labels for machine learning modelling|
-
-<h2> Statistical Descriptions </h2>
-
-Our target variable 'no_show' is a categorical variable. Majority of the variables in our dataset are categorical. To find the relation between two categorical variables we conducted a Cramer’s V test. The input of the Cramer’s V test is the statistic component of the Chi-square test.
 
 <h2>Machine Learning Models:</h2>
 
@@ -47,13 +43,13 @@ Accuracy: 72%
 
 <h3>Model 2: Multi-Variate Decision Tree</h3>
 
-A Decision Tree is suitable as it provides a clear and interpretable structure that shows how decisions are made based on the predictor variables. This can help us understand the factors influencing the target variable and determine the predictors that have a greater impact on the target variable. 
+A Decision Tree is suitable as it provides a clear and interpretable structure that shows how decisions are made based on the predictor variables. This can help us understand the factors influencing the target variable and determine the predictors that have a greater impact on the target variable 'no_show'. 
 
 Accuracy: 70%
 
 <h3>Model 3: Random Forest Classification</h3>
 
-Random Forest can capture non-linear relationships between predictor variables and the target variable 'no_show' by combining multiple decision trees, each trained on a random subset of the data and variables. This ensemble approach helps reduce overfitting and improves generalisation performance compared to a single decision tree.
+Random Forest can capture non-linear relationships between predictor variables and the target variable 'no_show' by combining multiple decision trees, each trained on a random subset of the data and variables. This ensemble approach helps reduce overfitting and improves generalisation performance compared to a single decision tree. It can also take in more significant predictor variables to produce a higher accuracy.
 
 Accuracy: 77%
 
@@ -71,8 +67,7 @@ Accuracy: 70%
 
 <h2>Conclusion</h2>
 
-The Random Forest model produces the highest accuracy, ROC-AUC and F1 Score across all models. Since the model is less prone to overfitting, it can take in more predictor variables to generate a prediction with higher accuracy and performance. Therefore, we can use this model to predict whether a customer will show up for his hotel reservation. 
-In order to reduce expenses incurred due to No-Shows, the hotel chain could consider implementing a deposit fee that is non-refundable on customers which the Random Forest predicts not showing up.
+The Random Forest model produces the highest accuracy, ROC-AUC and F1 Score across all models. Since the model is less prone to overfitting, it can take in more predictor variables to generate a prediction with higher accuracy and performance. Therefore, we can use this model to predict whether a customer will show up for his hotel reservation. In order to reduce expenses incurred due to No-Shows, the hotel chain could consider implementing a deposit fee that is non-refundable on customers which the Random Forest model predicts not showing up.
 
 <h2>What we have learned</h2>
 
