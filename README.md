@@ -88,7 +88,4 @@ In order to reduce expenses incurred due to No-Shows, the hotel chain could cons
 - @izackyy (Models and research)
 - @jxxsheng (EDA and research)
 
-<h2>Acknowledgments</h2>
 
-The dataset used in this project was obtained from [source].
-Inspiration and guidance from various sources such as lectures, online tutorials, articles, and open-source projects were instrumental in developing the models and analyzing the results.
